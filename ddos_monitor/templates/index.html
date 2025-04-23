@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DDOS流量监控面板</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .panel {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .ip-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .ip-item {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .ip-item:last-child {
+            border-bottom: none;
+        }
+        .banned {
+            color: red;
+            font-weight: bold;
+        }
+        .chart-container {
+            height: 300px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DDOS流量监控面板</h1>
+    
+    <div class="container">
+        <div class="panel">
+            <h2>网络流量</h2>
+            <div class="chart-container">
+                <canvas id="trafficChart"></canvas>
+            </div>
+            <div class="controls">
+                <label>阈值: </label>
+                <input type="number" id="threshold" value="100">
+                <button onclick="updateThreshold()">更新</button>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>活跃IP (<span id="ipCount">0</span>)</h2>
+            <div class="ip-list" id="currentIps"></div>
+        </div>
+        
+        <div class="panel">
+            <h2>封禁IP (<span id="banCount">0</span>)</h2>
+            <div class="ip-list" id="bannedIps"></div>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        const trafficChart = new Chart(
+            document.getElementById('trafficChart'),
+            {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: '接收流量 (bytes)',
+                            data: [],
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            }
+        );
+
+        // 更新流量图表
+        socket.on('stats_update', function(data) {
+            // 更新流量数据
+            const times = data.traffic_data.map(d => 
+                new Date(d.time * 1000).toLocaleTimeString());
+            const bytes = data.traffic_data.map(d => d.bytes_recv);
+            
+            trafficChart.data.labels = times;
+            trafficChart.data.datasets[0].data = bytes;
+            trafficChart.update();
+            
+            // 更新IP列表
+            document.getElementById('ipCount').textContent = data.current_ips.length;
+            document.getElementById('banCount').textContent = data.banned_ips.length;
+            
+            const currentIpsEl = document.getElementById('currentIps');
+            currentIpsEl.innerHTML = data.current_ips.map(ip => 
+                `<div class="ip-item">${ip}</div>`).join('');
+                
+            const bannedIpsEl = document.getElementById('bannedIps');
+            bannedIpsEl.innerHTML = data.banned_ips.map(ip => 
+                `<div class="ip-item banned">${ip}</div>`).join('');
+        });
+        
+        // 新封禁IP通知
+        socket.on('ip_banned', function(data) {
+            console.log(`IP被封禁: ${data.ip} 时间: ${data.time}`);
+        });
+        
+        // 更新阈值
+        function updateThreshold() {
+            const threshold = document.getElementById('threshold').value;
+            socket.emit('set_threshold', {threshold: parseInt(threshold)});
+        }
+    </script>
+</body>
+</html>

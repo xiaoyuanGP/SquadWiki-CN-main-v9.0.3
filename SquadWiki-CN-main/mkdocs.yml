@@ -1,0 +1,256 @@
+site_name: 战术小队中文维基
+site_author: GiantPanda 战队 小源
+copyright: "版权所有 &copy; 2025 GiantPanda 战队 小源"
+repo_url: https://github.com/AP54/SquadWiki-CN
+edit_uri: edit/main/docs/
+
+nav:
+  - "HOME":
+    - "Getting Started": "./index.md"
+    - "关于本项目": "./intro/about.md"
+    - "投喂": "./intro/support.md"
+    - "致谢": "./intro/thanks.md"
+  - "游戏指南":
+    - "指南简介": "./course/index.md"
+    - "新手入门":
+      - "第一目 设置和ui": "./course/beginner/chapter-1.md"
+      - "第二目 特装和武器": "./course/beginner/chapter-2.md"
+      - "第三目 团队和社区": "./course/beginner/chapter-3.md"
+      - "第四目 战斗技巧": "./course/beginner/chapter-4.md"
+      - "第五目 载具识别": "./course/beginner/chapter-5.md"
+      - "第六目 索敌技巧": "./course/beginner/chapter-6.md"
+      - "第七目 规则和模式": "./course/beginner/chapter-7.md"
+    - "队长指挥技术":
+      - "战斗队形管理": "./course/squadleader/formation-management.md"
+      - "请求火力支援": "./course/squadleader/request-fire-support.md"
+    - "战斗兵种攻略": 
+      - "精确射手":
+        - "精确射手入门指南": "./course/role/marksman/index.md"
+    - "模式规则":
+      - "模式简介": "./course/gamemode/index.md"
+      - "AAS | 攻守有序": "./course/gamemode/aas.md"
+      - "Destruction | 摧毁": "./course/gamemode/destruction.md"
+      - "Insurgency | 叛乱": "./course/gamemode/insurgency.md"
+      - "Invasion | 侵攻": "./course/gamemode/invasion.md"
+      - "RAAS | 随机攻守": "./course/gamemode/raas.md"
+      - "Seed | 暖服": "./course/gamemode/seed.md"
+      - "Skirmish | 遭遇战": "./course/gamemode/skirmish.md"
+      - "Tanks | 载具大战": "./course/gamemode/tanks.md"
+      - "Ta | 装甲死斗": "./course/gamemode/ta.md"
+      - "Tc | 领土控制": "./course/gamemode/tc.md"
+      - "Training | 训练": "./course/gamemode/training.md"
+  - "阵营派系":
+    - "阵营派系": "./faction/index.md"
+    - "[ADF]澳大利亚国防军":
+      - "派系概览": "./faction/adf/index.md"
+      - "兵种配置": "./faction/adf/kit/index.md"
+    - "[BAF]英国武装部队": 
+      - "派系概览": "./faction/baf/index.md"
+      - "兵种配置": "./faction/baf/kit/index.md"
+    - "[CAF]加拿大武装部队":
+      - "派系概览": "./faction/caf/index.md"
+      - "兵种配置": "./faction/caf/kit/index.md"
+    - "[IMF]非正规民兵部队":
+      - "派系概览": "./faction/imf/index.md"
+      - "兵种配置": "./faction/imf/kit/index.md"
+    - "[INS]反叛军":
+      - "派系概览": "./faction/ins/index.md"
+      - "兵种配置": "./faction/ins/kit/index.md"
+    - "[MEA]中东联盟":
+      - "派系概览": "./faction/mea/index.md"
+      - "兵种配置": "./faction/mea/kit/index.md"
+    - "[PLA]中国人民解放军":
+      - "派系概览": "./faction/pla/index.md"
+      - "兵种配置": "./faction/pla/kit/index.md"
+    - "[PLANMC]中国人民解放军海军陆战队":
+      - "派系概览": "./faction/planmc/index.md"
+      - "兵种配置": "./faction/planmc/kit/index.md"
+    - "[RGF]俄罗斯陆军":
+      - "派系概览": "./faction/rgf/index.md"
+      - "兵种配置": "./faction/rgf/kit/index.md"
+    - "[USA]美国陆军": 
+      - "派系概览": "./faction/usa/index.md"
+      - "兵种配置": "./faction/usa/kit/index.md"
+    - "[USMC]美国海军陆战队": 
+      - "派系概览": "./faction/usmc/index.md"
+      - "兵种配置": "./faction/usmc/kit/index.md"
+    - "[TLF]土耳其陆军": 
+      - "派系概览": "./faction/tlf/index.md"
+      - "兵种配置": "./faction/tlf/kit/index.md"
+    - "[VDV]俄罗斯空降部队": 
+      - "派系概览": "./faction/vdv/index.md"
+      - "兵种配置": "./faction/vdv/kit/index.md"
+  - "地图指南":
+    - "地图总览": "./map/index.md"
+    - "游戏模式说明": "./map/mode.md"
+    - "暖服推荐": "./map/seeding.md"
+    - "Al Basrah | 巴士拉": "./map/al-basrah.md"
+    - "Anvil | 铁砧": "./map/anvil.md"
+    - "Belaya Pass | 贝拉亚山口": "./map/belaya-pass.md"
+    - "Black Coast | 黑色海岸": "./map/black-coast.md"
+    - "Chora | 乔拉": "./map/chora.md"
+    - "Fallujah | 费卢杰": "./map/fallujah.md"
+    - "Fool's road | 傻瓜之路": "./map/fools-road.md"
+    - "Goose bay | 鹅湾": "./map/goose-bay.md"
+    - "Gorodok | 格鲁多克": "./map/gorodok.md"
+    - "Harju | 哈留": "./map/harju.md"
+    - "Jensen's Range | 延森训练场": "./map/jensens-range.md"
+    - "Kamdesh Highlands | 卡姆德什高地": "./map/kamdesh-highlands.md"
+    - "Kohat Toi | 科哈特": "./map/kohat-toi.md"
+    - "Kokan | 寇坎": "./map/kokan.md"
+    - "Lashkar Valley | 拉什卡谷": "./map/lashkar-valley.md"
+    - "Logar Valley | 卢格尔谷": "./map/logar-valley.md"
+    - "Manicouagan | 曼尼古根": "./map/manicouagan.md"
+    - "Mestia | 梅斯提亚": "./map/mestia.md"
+    - "Mutaha | 穆塔哈": "./map/mutaha.md"
+    - "Narva | 纳尔瓦": "./map/narva.md"
+    - "Pacific Proving Grounds | 太平洋训练场": "./map/pacific-proving-grounds.md"
+    - "Sanxian | 三贤岛": "./map/sanxian.md"
+    - "Skorpo | 斯科珀": "./map/skorpo.md"
+    - "Sumari Bala | 索马里": "./map/sumari-bala.md"
+    - "Tallil Outskirts | 塔利尔郊区": "./map/tallil-outskirts.md"
+    - "Yehorivka | 叶霍里夫卡": "./map/yehorivka.md"
+  - "更新信息":
+    - "战术小队 v8.2.1更新日志": "./update/v8.2.1/release-notes/index.md"
+    - "SQUAD 8.2.1 LIVE & RELEASE NOTES": "./update/v8.2.1/release-notes/en.md"
+    - "战术小队 v8.2 更新日志": "./update/v8.2/release-notes/index.md"
+    - "SQUAD 8.2 LIVE & RELEASE NOTES": "./update/v8.2/release-notes/en.md"
+    - "战术小队 v8.0.2 更新日志": "./update/v8.0.2/release-notes/index.md"
+    - "SQUAD 8.0.2 LIVE & RELEASE NOTES": "./update/v8.0.2/release-notes/en.md"
+    - "战术小队 v8.0.1 更新日志": "./update/v8.0.1/release-notes/index.md"
+    - "SQUAD 8.0.1 LIVE & RELEASE NOTES": "./update/v8.0.1/release-notes/en.md"
+    - "战术小队 v8.0 更新日志": "./update/v8.0/release-notes/index.md"
+    - "SQUAD 8.0 LIVE & RELEASE NOTES": "./update/v8.0/release-notes/en.md"
+    - "战术小队 v7.1 更新日志": "./update/v7.1/release-notes/index.md"
+    - "SQUAD 7.1 LIVE & RELEASE NOTES": "./update/v7.1/release-notes/en.md"
+    - "战术小队 v7.0.1 更新日志": "./update/v7.0.1/release-notes/index.md"
+    - "SQUAD HOTFIX 7.0.1 RELEASE NOTES": "./update/v7.0.1/release-notes/en.md"
+    - "战术小队 v7.0 更新日志": "./update/v7.0/release-notes/index.md"
+    - "SQUAD 7.0 LIVE & RELEASE NOTES": "./update/v7.0/release-notes/en.md"
+    - "战术小队 v6.0.2 更新日志": "./update/v6.0.2/release-notes/index.md"
+    - "Squad Hotfix v6.0.2 Release Notes": "./update/v6.0.2/release-notes/en.md"
+    - "战术小队 v6.0.1 更新日志": "./update/v6.0.1/release-notes/index.md"
+    - "Squad Hotfix v6.0.1 Release Notes": "./update/v6.0.1/release-notes/en.md"
+    - "战术小队 v6.0 更新日志": "./update/v6.0/release-notes/index.md"
+    - "Squad Hotfix v6.0 Release Notes": "./update/v6.0/release-notes/en.md"
+    - "战术小队 v5.1.1 更新日志": "./update/v5.1.1/release-notes/index.md"
+    - "Squad Hotfix v5.1.1 Release Notes": "./update/v5.1.1/release-notes/en.md"
+    - "战术小队 v5.1 更新日志": "./update/v5.1/release-notes/index.md"
+    - "Squad Hotfix v5.1 Release Notes": "./update/v5.1/release-notes/en.md"
+    - "战术小队 v5.0.1 更新日志": "./update/v5.0.1/release-notes/index.md"
+    - "Squad Update v5.0.1 Release Notes": "./update/v5.0.1/release-notes/en.md"
+    - "战术小队 v5.0 更新日志": "./update/v5.0/release-notes/index.md"
+    - "Squad Update v5.0 Release Notes": "./update/v5.0/release-notes/en.md"
+    - "战术小队 v4.5 更新日志": "./update/v4.5/release-notes/index.md"
+    - "Squad Update v4.5 Release Notes": "./update/v4.5/release-notes/en.md"
+    - "战术小队热修复 4.4.1 更新日志": "./update/v4.4.1/release-notes/index.md"
+    - "Squad Hotfix 4.4.1 Release Notes": "./update/v4.4.1/release-notes/en.md"
+    - "战术小队 v4.4 更新日志": "./update/v4.4/release-notes/index.md"
+    - "Squad Update v4.4 Release Notes": "./update/v4.4/release-notes/en.md"
+    - "战术小队热修复 4.3.1 更新日志": "./update/v4.3.1/release-notes/index.md"
+    - "Squad Hotfix 4.3.1 Release Notes": "./update/v4.3.1/release-notes/en.md"
+    - "战术小队 v4.3 更新日志": "./update/v4.3/release-notes/index.md"
+  - "赛事介绍":
+    - "赛事总览": "./contest/index.md"
+    - "SOI | 战术小队公开邀请赛": "./contest/soi/index.md"
+    - "SPLC | 战术小队中国顶级联赛": "./contest/splc/index.md"
+    - "Squad Masters | 战术小队大师赛": "./contest/masters/index.md"
+    - "GSL | 全球战术小队联盟锦标赛": "./contest/gsl/index.md"
+  - "服务器管理":
+    - "管理指南": "./server/index.md"
+    - "服务端管理":
+      - "服务端安装": "./server/installation.md"
+      - "服务器配置": "./server/configuration.md"
+      - "服务器标签": "./server/tag.md"
+    - "控制命令":
+      - "控制命令简介": "./server/command/index.md"
+      - "公共命令": "./server/command/public.md"
+      - "管理命令": "./server/command/admin.md"
+      - "摄影命令": "./server/command/camera.md"
+      - "载具生成命令": "./server/command/vehicle.md"
+      - "部署物生成命令": "./server/command/deployable.md"
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - announce.dismiss
+    - navigation.footer
+    - tabs: true
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: deep purple
+  static_templates:
+    - 404.html
+  language: 'zh'
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+    repo: fontawesome/brands/github
+  logo: img/logo/sq_200_200.png
+  favicon: img/logo/sq_200_200.png
+  plugins:
+    - search:
+        lang: zh
+    - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
+    - git-revision-date-localized:
+       enable_creation_date: true
+       type: iso_date
+
+extra_javascript:
+  - scripts/javaScripts/tablesort.min.js
+  - scripts/javaScripts/tablesort.js
